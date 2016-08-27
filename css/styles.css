@@ -28,6 +28,7 @@
 body{
 	margin:0px;
 	background: #fafafa;
+	overflow-x: hidden;
 }
 
 a{text-decoration: none;}
