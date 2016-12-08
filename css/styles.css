@@ -8,7 +8,13 @@
 .tal{text-align: left;}
 .tar{text-align: right;}
 .tac{text-align: center;}
-
+.tul{text-decoration: underline;}
+.flex{display:flex;}
+.bnone{border: none;}
+.mtop{margin-top: 50px;}
+.mbot{margin-bottom: 50px;}
+.mauto{margin:auto;}
+.noval{font-family: noval}
 /*---------Height--------*/
 
 .h0{height: 0%;}
@@ -122,6 +128,7 @@ li{list-style: none;}
 	flex-wrap: wrap;
 	justify-content: space-between;
 	background: #fff;
+	box-shadow: 0px 0px 10px 0px #888;
 }
 
 #logo{
@@ -283,7 +290,7 @@ h3{
 	padding-top: 20px;
 }
 .bar{
-	width: 60px;
+	width: 70px;
 	margin: 20px;
 	margin-bottom: 0px;
 	background:#00bcd4;
@@ -322,7 +329,97 @@ h6{
 
 
 
+/*------------PORTFOLIO-------------*/
 
+#port{
+	width: 100%;
+	height: 700px;
+	background: #00bcd4;
+}
+
+#portmain{
+	width: 100%;
+	height: 75%;
+	background: url('../images/port50.jpg')fixed no-repeat center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+}
+
+#portsub{
+	width: 1000px;
+	height: 25%;
+	margin: auto;
+	align-self: flex-end;
+	display: flex;
+}
+
+#portmain>h4{
+	color: #fff;
+	font-size: 45px;
+	align-items: center;
+	margin-top: -100px;
+}
+
+.portcat{
+	width: 220px;
+	height: 220px;
+	background: #fff;
+	justify-content: space-around;
+	align-items: center;
+	margin:-100px auto auto auto;
+	overflow: hidden;
+}
+
+.portcat>p{
+	color: #00bcd4;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: regular;
+	margin-top: 174px;
+}
+
+.portcat>p2{display: none;}
+
+.portcat>img{
+	height: 160px;
+	width: 160px;
+	margin: 10px auto auto 30px;
+}
+
+#proact{
+	height: 440px;
+	width: 220px;
+	background:url(../images/portfolio/transblue.png) repeat-x center bottom;
+	margin-top: -244px;
+	transition: margin-top 200ms;
+}
+
+#proact:hover{
+	margin-top: -464px;
+}
+
+.misc{background: url(../images/portfolio/misc.png) no-repeat center 10px #fff; background-size: 160px auto}
+.wallpaper{background: url(../images/portfolio/wallpaper.png) no-repeat center 10px #fff; background-size: 160px auto}
+.poster{background: url(../images/portfolio/poster.png) no-repeat center 10px #fff; background-size: 160px auto}
+.website{background: url(../images/portfolio/website.png) no-repeat center 10px #fff; background-size: 160px auto}
+
+#proact>p{
+	font-size: 15px;
+	text-align: center;
+	line-height: 20px;
+	padding-top: 240px;
+	color: #fff
+}
+
+#proact>p>a{
+	font-family: regular;
+	font-size: 17px;
+	font-weight: bold;
+	color:#fff;
+}
+
+#proact>p>a:hover{text-decoration: underline;}
 
 /*-------------MEDIA SCREENS--------------*/
 
@@ -333,7 +430,21 @@ h6{
 		.box3	{ flex:1;}
 		#pi{margin: auto;}
 		#skills{flex-flow: row wrap;}
-		#stext{flex:1 100%; padding-bottom: 100px; }
+		#stext{flex:1 100%; padding-bottom: 100px; 
+}
+
+
+
+
+@media screen and (max-width: 780px){
+
+		#header{
+			justify-content:center;
+		}
+
+}
+
+
 
 @media screen and (max-width: 550px){
 
@@ -343,6 +454,9 @@ h6{
 			flex:1;
 		}
 		
+		.bar{
+			min-width: 40px;
+		}	
 		#text>h1{
 			font-size: 40px;
 		}
@@ -360,17 +474,10 @@ h6{
 		h5{font-size: 15px;}
 		#pi{width: 220px;}
 		.aboutbox{padding: 50px;}
+		#porttext{text-align: center;}
 		
 }
 
-
-@media screen and (max-width: 780px){
-
-		#header{
-			justify-content:center;
-		}
-
-}
 
 
 @media screen and (max-width: 857px){
@@ -411,4 +518,74 @@ h6{
 		font-size: 16px;
 	}
 	.bar{margin: 5px;}
+}
+
+
+@media screen and (max-width: 1000px) {
+		#portsub{
+			width: auto;
+			height: auto;
+			margin-top: -200px;
+			align-self: flex-end;
+			display: block;
+			padding: 30px;
+			background: #00bcd4;
+		}
+
+		.portcat{
+			width: 90%;
+			max-height: 60px;
+			justify-content: space-around;
+			align-items: center;
+			margin:10px auto 10px auto;
+			overflow: hidden;
+			transition: max-height 200ms ease-in-out;
+		}
+
+		.portcat:hover{
+			max-height: 300px;
+		}
+
+		.portcat>p{
+			color: #00bcd4;
+			text-align: left;
+			padding-left: 30px;
+			text-transform: uppercase;
+			font-family: regular;
+			margin-top: 8px;
+			padding-top: 10px;
+		}
+
+		.portcat>p2{
+			display: block;
+			padding: 10px 20px;
+			font-size: 16px;
+			font-family: noval;
+			line-height: 20px;
+			margin-top: -20px;
+			padding-bottom: -100px;
+		}
+		
+		.portcat>p2>a{
+			text-align: center;
+			color: #00BCD4;
+			font-weight: bold;
+			text-align: center;
+		}
+		
+		.portcat>p2>a:hover{
+			text-decoration: underline;
+
+		}
+
+		#proact{
+			display: none;
+		}
+
+
+		.misc{background: url(../images/portfolio/misc.png) no-repeat top 10px right 10px  #fff; background-size: 40px auto;}
+		.wallpaper{background: url(../images/portfolio/wallpaper.png) no-repeat top 10px right 10px   #fff; background-size: 40px auto}
+		.poster{background: url(../images/portfolio/poster.png) no-repeat top 10px right 10px   #fff; background-size: 40px auto}
+		.website{background: url(../images/portfolio/website.png) no-repeat top 10px right 10px   #fff; background-size: 40px auto}
+
 }
