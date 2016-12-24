@@ -333,13 +333,13 @@ h6{
 
 #port{
 	width: 100%;
-	height: 700px;
+	height: 750px;
 	background: #00bcd4;
 }
 
 #portmain{
 	width: 100%;
-	height: 75%;
+	height: 70%;
 	background: url('../images/port50.jpg')fixed no-repeat center;
 	background-size: cover;
 	display: flex;
@@ -348,7 +348,7 @@ h6{
 
 #portsub{
 	width: 1000px;
-	height: 25%;
+	height: 30%;
 	margin: auto;
 	align-self: flex-end;
 	display: flex;
@@ -420,6 +420,21 @@ h6{
 }
 
 #proact>p>a:hover{text-decoration: underline;}
+
+
+/*-----------BLOG----------*/
+
+#blog{
+	width: 100%;
+	height: 500px;
+	background: #fff;
+}
+
+
+
+
+
+
 
 /*-------------MEDIA SCREENS--------------*/
 
@@ -518,10 +533,20 @@ h6{
 		font-size: 16px;
 	}
 	.bar{margin: 5px;}
+
+		#portmain>h4{
+		font-size: 35px;
+		margin-top: -120px;
+	}
 }
 
 
 @media screen and (max-width: 1000px) {
+
+		#port{height: auto;}
+
+		#portmain{height: 550px;}
+
 		#portsub{
 			width: auto;
 			height: auto;
@@ -543,7 +568,7 @@ h6{
 		}
 
 		.portcat:hover{
-			max-height: 300px;
+			max-height: 800px;
 		}
 
 		.portcat>p{
@@ -554,16 +579,16 @@ h6{
 			font-family: regular;
 			margin-top: 8px;
 			padding-top: 10px;
+			padding-bottom: -100px;
 		}
 
 		.portcat>p2{
 			display: block;
 			padding: 10px 20px;
-			font-size: 16px;
+			font-size: 14px;
 			font-family: noval;
 			line-height: 20px;
 			margin-top: -20px;
-			padding-bottom: -100px;
 		}
 		
 		.portcat>p2>a{
